@@ -2,7 +2,9 @@
 
 <h3>Snacks</h3>
 <ul>
-  <% @machine.snacks.each do |snack| %>
+  <% @snacks.each do |snack| %>
   <li> <%= snack.name %>: <%=number_to_currency(snack.price) %> </li>
   <% end %>
 </ul>
+
+<h3>Average Price: <%=number_to_currency(@snacks.avg_price)%></h3>
