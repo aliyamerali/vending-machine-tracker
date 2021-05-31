@@ -5,4 +5,9 @@ class Snack < ApplicationRecord
   def self.avg_price
     average(:price)
   end
+
+  def self.kind_count
+    distinct(:name).count
+  end
+
 end

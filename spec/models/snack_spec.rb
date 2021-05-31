@@ -13,5 +13,13 @@ RSpec.describe Snack, type: :model do
 
       expect(Snack.avg_price).to eq(1.99)
     end
+
+    it '.kind_count returns the number of different snack names in a set' do
+      Snack.create!(name: "Cheetos", price: 2.99)
+      Snack.create!(name: "Lays", price: 0.99)
+      Snack.create!(name: "Snyders", price: 1.99)
+
+      expect(Snack.kind_count).to eq(3)
+    end
   end
 end
