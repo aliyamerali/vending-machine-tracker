@@ -23,7 +23,6 @@ RSpec.describe 'Machine Show Page', type: :feature do
     expect(page).to have_content("#{@cheetos.name}: $#{@cheetos.price}")
     expect(page).to have_content("#{@chips.name}: $#{@chips.price}")
     expect(page).to_not have_content("#{@pretzels.name}: $#{@pretzels.price}")
-
   end
 
   it 'shows average price for all of the snacks in that machine' do
@@ -32,6 +31,5 @@ RSpec.describe 'Machine Show Page', type: :feature do
 
     visit "/machines/#{@turing.id}"
     expect(page).to have_content('Average Price: $1.49')
-
   end
 end
